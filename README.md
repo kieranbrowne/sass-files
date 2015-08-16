@@ -1,15 +1,9 @@
-Add this line to the style.css file in your main directory.
+###Setup
+In web directory execute `init-sass` then `bundle install`. 
+Then add this line to the style.css file.
+
 ```css
 @import url('./styles/css/style.css');
 ```
 
-To create bundle and download any requirements
-```
-bundle init
-bundle install
-```
-
-To track changes in sass files 
-```
-bundle exec compass watch
-```
+In the styles directory execute `bundle exec compass watch` to track changes and update files accordingly.
