@@ -1,0 +1,31 @@
+// Requirements
+// ============
+
+@import "susy";
+@import "breakpoint";
+
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: 960px,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: border-box,
+  last-flow: false,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  )
+);
+
+//@include susy-breakpoint(600px, 6);
+@include breakpoint(600px) {
+    $susy: layout(6);
+}

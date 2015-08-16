@@ -1,0 +1,45 @@
+%link-list {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+%full-width-content-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 999px;
+  }
+  &:after {
+    right: 100%;
+  }
+  &:before {
+    left: 100%;
+  }
+}
+@mixin full-width-image($image-url) {
+  @extend %full-width-content-holder;
+  background: url($image-url) no-repeat center center fixed;
+  background-size: cover;
+  &:after {
+    background: inherit;
+  }
+  &:before {
+    background: inherit;
+  }
+}
+@mixin full-width-color($color) {
+  @extend %full-width-content-holder;
+  background-color: $color;
+  &:after {
+    background: inherit;
+  }
+  &:before {
+    background: inherit;
+  }
+}
+  
