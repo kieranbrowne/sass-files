@@ -42,4 +42,14 @@
     background: inherit;
   }
 }
-  
+
+@mixin selection-color($color) {
+  a:focus {
+      outline: none; }
+  ::selection {
+    background: $color;
+    color: #fff; }
+  ::-moz-selection {
+    background: $color;
+    color: #fff; }
+}
