@@ -1,10 +1,38 @@
-/* line 1, ../sass/partials/_layout.scss */
-html, body { font-size: 16px; overflow-x: hidden; }
+html, body {
+  font-size: 16px;
+  overflow-x: hidden;
+}
 
-/* line 5, ../sass/partials/_layout.scss */
-*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-/* line 11, ../sass/style.scss */
-#container, header, footer { max-width: 960px; margin-left: auto; margin-right: auto; }
-/* line 12, ../../../../../../../var/lib/gems/1.9.1/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
-#container:after, header:after, footer:after { content: " "; display: block; clear: both; }
+#container, header, footer {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container:after, header:after, footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+p {
+  font-size: 29px;
+  font-weight: 200;
+  color: #666;
+  margin-left: 16.94915%;
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+}
+@media (min-width: 600px) {
+  p {
+    color: #e2e;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

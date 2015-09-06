@@ -1,2 +1,6 @@
 styles/.sass-cache/*
 *~
+node_modules/
+.sass-cache/
+*.html
+

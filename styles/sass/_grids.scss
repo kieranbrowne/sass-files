@@ -25,7 +25,7 @@ $susy: (
   )
 );
 
-//@include susy-breakpoint(600px, 6);
+@include susy-breakpoint(600px, 6);
 @include breakpoint(600px) {
     $susy: layout(6);
 }
