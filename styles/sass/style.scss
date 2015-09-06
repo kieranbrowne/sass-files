@@ -2,21 +2,31 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/functions";
-@import "partials/layout";
+//@import "partials/layout";
 @import "breakpoint";
 
 #container, header, footer {
-  @include container;
+  @include span(4);
 }
-
-p {
-  font-size:  29px;
-  font-weight: 200;
-
-  color: #666;
-  @include pre(2);
-  @include span(5);
-  @include breakpoint(600px) {
-    color:#e2e;
-  }
+body { 
+  background-color: #933;
+}
+html, body {
+    font-size: $main-font-size;
+    overflow-x:hidden;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+// Fill in
+.button {
+  display: inline-block;
+  padding: 5px;
+  @include border-radius(0px);
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  @include flex-font(9,19);
 }

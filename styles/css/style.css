@@ -1,3 +1,13 @@
+#container, header, footer {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+body {
+  background-color: #933;
+}
+
 html, body {
   font-size: 16px;
   overflow-x: hidden;
@@ -9,29 +19,70 @@ html, body {
   box-sizing: border-box;
 }
 
-#container, header, footer {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+.button {
+  display: inline-block;
+  padding: 5px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
 }
-#container:after, header:after, footer:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (min-width: 450px) {
+  .button {
+    font-size: 9px;
+  }
 }
-
-p {
-  font-size: 29px;
-  font-weight: 200;
-  color: #666;
-  margin-left: 16.94915%;
-  width: 40.67797%;
-  float: left;
-  margin-right: 1.69492%;
+@media (min-width: 500px) {
+  .button {
+    font-size: 10px;
+  }
+}
+@media (min-width: 550px) {
+  .button {
+    font-size: 11px;
+  }
 }
 @media (min-width: 600px) {
-  p {
-    color: #e2e;
+  .button {
+    font-size: 12px;
+  }
+}
+@media (min-width: 650px) {
+  .button {
+    font-size: 13px;
+  }
+}
+@media (min-width: 700px) {
+  .button {
+    font-size: 14px;
+  }
+}
+@media (min-width: 750px) {
+  .button {
+    font-size: 15px;
+  }
+}
+@media (min-width: 800px) {
+  .button {
+    font-size: 16px;
+  }
+}
+@media (min-width: 850px) {
+  .button {
+    font-size: 17px;
+  }
+}
+@media (min-width: 900px) {
+  .button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 950px) {
+  .button {
+    font-size: 19px;
   }
 }
 

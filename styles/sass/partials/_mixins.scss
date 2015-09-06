@@ -53,3 +53,33 @@
     background: $color;
     color: #fff; }
 }
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// shapes
+@mixin circle($diameter) {
+  @include border-radius(50%);
+  width: $diameter;
+  height: $diameter;
+  display: block;
+}
+
+
+
+// icon
+@mixin icon($src) {
+  background: url($src) no-repeat scroll 5px center;
+}
+
+// responsive fonts
+@mixin flex-font($mobile,$full) {
+  @each $i in range($mobile,$full) {
+    @media (min-width: $i*50 +px) {
+      font-size: $i + px;
+    }
+  }
+}

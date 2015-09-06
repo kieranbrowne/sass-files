@@ -2,3 +2,53 @@
 @function fn($x) {
   @return $x*2
 }
+$tests: (
+  1:2,
+  3:5
+);
+
+@function range($x,$y) {
+  $list: ();
+  @for $i from $x through $y {
+    $list: append($list,$i);
+  }
+  @return $list;
+}
+$range-tests: (
+  (2,4):(2 3 4),
+  (0,3):(0 1 2 3),
+);
+
+
+
+
+
+
+// testing 
+@mixin run-tests($tests, $function) {
+  $output: '';
+  $length: length($tests);
+  $failing: 0;
+
+  @each $test, $expected-result in $tests {
+    $result: call($function, $test...);
+    $test-index: index(map-keys($tests), $test);
+    $output: $output + '\a Test #{$test-index} out of #{$length}... ';
+
+    @if $result == $expected-result {
+      // Test passed
+      $output: $output + 'pass';
+    } @else {
+      // Test failed
+      $failing: $failing + 1;
+      $output: $output + 'fail\a   Expected : `#{$expected-result}`.\a   Actual   : `#{$result}`.';
+    }
+  }
+
+  // Print output
+  @error 'Started tests for function `#{$function}`\a '
+  + '-----------------------------------'
+  + $output + '\a '
+  + '-----------------------------------\a '
+  + '#{ $failing } test(s) out of #{$length} failing.';
+}
